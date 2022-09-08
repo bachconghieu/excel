@@ -1,0 +1,59 @@
+				Active Offices
+
+LINK: https://tinhte.vn/thread/huong-dan-kich-hoat-office-2010-2013-2016-2019-bang-lenh-100.3006154/
+
+
+
+- Office 2010:
+if exist "%ProgramFiles%\Microsoft Office\Office14\ospp.vbs" cd /d "%ProgramFiles%\Microsoft Office\Office14"
+if exist "%ProgramFiles(x86)%\Microsoft Office\Office14\ospp.vbs" cd /d "%ProgramFiles(x86)%\Microsoft Office\Office14"
+cscript //Nologo OSPP.VBS /inpkey:VYBBJ-TRJPB-QFQRF-QFT4D-H3GVB
+cscript //Nologo ospp.vbs /sethst:kms.lotro.cc&cscript //nologo ospp.vbs /act&timeout 5&start winword&exit
+@
+
+==============================
+
+- Office 2013:
+if exist "%ProgramFiles%\Microsoft Office\Office15\ospp.vbs" cd /d "%ProgramFiles%\Microsoft Office\Office15"
+if exist "%ProgramFiles(x86)%\Microsoft Office\Office15\ospp.vbs" cd /d "%ProgramFiles(x86)%\Microsoft Office\Office15"
+cscript OSPP.VBS /inpkey:YC7DK-G2NP3-2QQC3-J6H88-GVGXT
+cscript OSPP.VBS /inpkey:FN8TT-7WMH6-2D4X9-M337T-2342K
+cscript OSPP.VBS /inpkey:KBKQT-2NMXY-JJWGP-M62JB-92CD4
+cscript OSPP.VBS /inpkey:C2FG9-N6J68-H8BTJ-BW3QX-RM3B3
+cscript ospp.vbs /sethst:kms.lotro.cc
+cscript ospp.vbs /act
+Hoặc
+if exist "%ProgramFiles%\Microsoft Office\Office15\ospp.vbs" cd /d "%ProgramFiles%\Microsoft Office\Office15"
+if exist "%ProgramFiles(x86)%\Microsoft Office\Office16\ospp.vbs" cd /d "%ProgramFiles(x86)%\Microsoft Office\Office15"
+cscript //nologo OSPP.VBS /inpkey:YC7DK-G2NP3-2QQC3-J6H88-GVGXT
+cscript //nologo ospp.vbs /sethst:kms.lotro.cc&cscript //nologo ospp.vbs /act&timeout 5&start winword&exit
+@
+
+================================
+
+- Office 2016:
+set ver=16
+if exist "%ProgramFiles%\Microsoft Office\Office%ver%\ospp.vbs" cd /d "%ProgramFiles%\Microsoft Office\Office%ver%"
+if exist "%ProgramFiles(x86)%\Microsoft Office\Office%ver%\ospp.vbs" cd /d "%ProgramFiles(x86)%\Microsoft Office\Office%ver%"
+for /f "tokens=8" %b in ('cscript //nologo OSPP.VBS /dstatus ^| findstr /b /c:"Last 5"') do (cscript //nologo ospp.vbs /unpkey:%b)
+for /f %i in ('dir /b ..\root\Licenses%ver%\ProPlusVL_KMS*.xrm-ms') do cscript ospp.vbs /inslic:"..\root\Licenses%ver%\%i"
+cscript ospp.vbs /inpkey:XQNVK-8JYDB-WJ9W3-YJ8YR-WFG99
+cscript ospp.vbs /sethst:kms.lotro.cc
+cscript ospp.vbs /act
+Start winword
+@
+Hoặc:
+cscript slmgr.vbs /skms kms.digiboy.ir
+cscript slmgr.vbs /ipk XQNVK-8JYDB-WJ9W3-YJ8YR-WFG99
+cscript slmgr.vbs /ato d450596f-894d-49e0-966a-fd39ed4c4c64
+timeout 2&start winword&exit
+
+==========================================
+
+- Office 2019:
+1) ProPlus
+if exist "%ProgramFiles%\Microsoft Office\Office16\ospp.vbs" cd /d "%ProgramFiles%\Microsoft Office\Office16" if exist "%ProgramFiles(x86)%\Microsoft Office\Office16\ospp.vbs" cd /d "%ProgramFiles(x86)%\Microsoft Office\Office16" set "cmd=cscript //nologo ospp.vbs" %cmd% /inpkey:NMMKJ-6RK4F-KMJVX-8D9MJ-6MWKP >nul 2>&1 %cmd% /dstatus | findstr "Office19ProPlus2019VL" if not %errorlevel% == 0 (for /f %x in ('dir /b ..\root\Licenses16\ProPlus2019VL*.xrm-ms') do %cmd% /inslic:"..\root\Licenses16\%x") %cmd% /inpkey:NMMKJ-6RK4F-KMJVX-8D9MJ-6MWKP %cmd% /sethst:kms.lotro.cc & %cmd% /act cls & %cmd% /dstatus echo.
+2) Project Pro
+if exist "%ProgramFiles%\Microsoft Office\Office16\ospp.vbs" cd /d "%ProgramFiles%\Microsoft Office\Office16" if exist "%ProgramFiles(x86)%\Microsoft Office\Office16\ospp.vbs" cd /d "%ProgramFiles(x86)%\Microsoft Office\Office16" set "cmd=cscript //nologo ospp.vbs" %cmd% /inpkey:B4NPR-3FKK7-T2MBV-FRQ4W-PKD2B >nul 2>&1 %cmd% /dstatus | findstr "Office19ProjectPro2019VL" if not %errorlevel% == 0 (for /f %x in ('dir /b ..\root\Licenses16\ProjectPro2019VL*.xrm-ms') do %cmd% /inslic:"..\root\Licenses16\%x") %cmd% /inpkey:B4NPR-3FKK7-T2MBV-FRQ4W-PKD2B %cmd% /sethst:kms.lotro.cc & %cmd% /act cls & %cmd% /dstatus echo.
+3) Visio Pro
+if exist "%ProgramFiles%\Microsoft Office\Office16\ospp.vbs" cd /d "%ProgramFiles%\Microsoft Office\Office16" if exist "%ProgramFiles(x86)%\Microsoft Office\Office16\ospp.vbs" cd /d "%ProgramFiles(x86)%\Microsoft Office\Office16" set "cmd=cscript //nologo ospp.vbs" %cmd% /inpkey:9BGNQ-K37YR-RQHF2-38RQ3-7VCBB >nul 2>&1 %cmd% /dstatus | findstr "Office19VisioPro2019VL" if not %errorlevel% == 0 (for /f %x in ('dir /b ..\root\Licenses16\VisioPro2019VL*.xrm-ms') do %cmd% /inslic:"..\root\Licenses16\%x") %cmd% /inpkey:9BGNQ-K37YR-RQHF2-38RQ3-7VCBB %cmd% /sethst:kms.lotro.cc & %cmd% /act cls & %cmd% /dstatus echo.
